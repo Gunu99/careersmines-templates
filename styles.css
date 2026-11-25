@@ -1,0 +1,341 @@
+/* Careersmines Templates — GitHub Pages
+   Palette matches the product cover art: navy #11183a / #1e295a, teal #6cc3b7. */
+
+:root {
+  --ink: #11183a;
+  --navy: #1e295a;
+  --teal: #0f6f66;
+  --teal-bright: #6cc3b7;
+  --teal-deep: #0b4f49;
+  --paper: #f4f1ea;
+  --card: #ffffff;
+  --muted: #5c6280;
+  --line: #d9dde8;
+  --promo: #132e2c;
+  --promo-gold: #f3e2b0;
+  --shadow: 0 10px 30px rgba(17, 24, 58, 0.08);
+  --radius: 18px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--teal); }
+
+a:hover { color: var(--teal-deep); }
+
+.wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--ink);
+  color: #f4f1ea;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(108, 195, 183, 0.25);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  color: inherit;
+  text-decoration: none;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 1.15rem;
+}
+
+.logo span {
+  color: var(--teal-bright);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #dce4e3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav a:hover { color: var(--teal-bright); }
+
+/* START: BLACKFRIDAY30 promo. Delete this block after 1 Dec 2026. */
+.promo {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(108, 195, 183, 0.28), transparent 45%),
+    var(--promo);
+  color: #e9f4f2;
+}
+
+.promo .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 0.85rem 0;
+}
+
+.promo p { margin: 0; font-size: 0.98rem; }
+
+.promo strong { color: var(--promo-gold); font-weight: 700; }
+
+.promo-code {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px dashed var(--promo-gold);
+  border-radius: 6px;
+  color: var(--promo-gold);
+  font-family: ui-monospace, "Cascadia Code", Menlo, monospace;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+/* END: BLACKFRIDAY30 promo */
+
+/* Hero */
+.hero {
+  padding: 3.4rem 0 2.4rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.8rem;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 3.15rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 1.18rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 650;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--ink);
+  color: #f6f8ff;
+}
+
+.btn-primary:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn-ghost:hover { background: #fff; color: var(--ink); }
+
+/* Cards */
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  padding-bottom: 3.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e8eaf2;
+}
+
+.card-body {
+  padding: 1.15rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+}
+
+.card h3 {
+  margin: 0;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.22rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.price {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: #e8f6f3;
+  color: var(--teal-deep);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.card-body > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #4a5070;
+  background: #f3f4f8;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1rem;
+  margin-top: auto;
+  padding-top: 0.55rem;
+}
+
+.card-actions .btn { padding: 0.55rem 0.95rem; font-size: 0.92rem; }
+
+.lite-link {
+  font-weight: 650;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.lite-link:hover { text-decoration: underline; }
+
+/* Footer */
+.site-footer {
+  background: var(--ink);
+  color: #c9d0de;
+  padding: 2.4rem 0 2.2rem;
+}
+
+.site-footer h2 {
+  margin: 0 0 0.6rem;
+  color: #f4f1ea;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.site-footer a { color: var(--teal-bright); }
+
+.site-footer .fine {
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  color: #9aa3b8;
+  max-width: 48rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrap { flex-wrap: wrap; padding: 0.7rem 0; }
+  .hero { padding-top: 2.2rem; }
+  .nav { gap: 0.8rem; }
+}
